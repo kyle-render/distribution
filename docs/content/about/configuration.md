@@ -676,9 +676,9 @@ authentication using an
 [Apache htpasswd file](https://httpd.apache.org/docs/2.4/programs/htpasswd.html).
 The only supported password format is
 [`bcrypt`](https://en.wikipedia.org/wiki/Bcrypt). Entries with other hash types
-are ignored. The `htpasswd` file is reloaded if its modification time has changed since
-distribution last loaded it.
-If the file is invalid, the registry will display an error and will not start.
+are ignored. The `htpasswd` file is reloaded if its modification time has
+changed since distribution last loaded it. Errors loading the `htpasswd` file will
+cause distribution to fail any authentication attempts.
 
 > **Warning**: If the `htpasswd` file is missing, the file will be created and provisioned with a default user and automatically generated password.
 > The password will be printed to stdout.
